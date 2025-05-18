@@ -79,3 +79,4 @@ if st.button("Predict Rainfall"):
     input_vector = np.array([[month_enc, sub_enc, year]])
     prediction = model.predict(input_vector)[0]
     st.success(f"Expected rainfall in **{subdivision}** during **{month} {year}** is **{prediction:.2f} mm**.")
+
