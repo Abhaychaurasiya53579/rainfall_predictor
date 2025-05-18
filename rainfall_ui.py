@@ -28,6 +28,7 @@ def load_model():
         df = pd.read_csv('rainfall in india 1901-2015.csv')
         df.dropna(inplace=True)
         months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
+        st.write("Columns in DataFrame:", df.columns.tolist())
         df_melted = df.melt(id_vars=['SUBDIVISION', 'YEAR'], value_vars=months,
                             var_name='MONTH', value_name='RAINFALL')
 
